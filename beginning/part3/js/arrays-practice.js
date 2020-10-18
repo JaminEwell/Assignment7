@@ -37,12 +37,68 @@ console.log(movies.length);
 /*STEP 4  Declare an array called movies using literal notation. Then, assign one of your favorite movies to each index in the array until you have 5 
           total movies in your array. Now, use the delete operator to remove the first movie in the array. Use the console to display the contents of the array.*/
 
+var movies = [];
+movies[0] = "Terminator";
+movies[1] = "Rambo";
+movies[2] = "Hangover";
+movies[3] = "Matrix";
+movies[4] = "Avengers";
+delete(array[0]);
+
+console.log(movies);
+
+
+
+
 /*STEP 5  Declare an array called movies using literal notation. Then, assign one of your favorite movies to each index in the array until you have 7
-          total movies in your array. Now, use a for loop to iterate through the array and display each movie within the console window./*
+          total movies in your array. Now, use a for loop to iterate through the array and display each movie within the console window.*/
+
+var movies = [];
+movies[0] = "Terminator";
+movies[1] = "Rambo";
+movies[2] = "Hangover";
+movies[3] = "Matrix";
+movies[4] = "Avengers";
+movies[5] = "Halloween";
+movies[6] = "Ace Ventura";
+
+for (var i = 0; i < movies.length; i++) {
+    console.log(movies[i]);
+}
 
 //STEP 6  Copy the code from step 5. Now, use a for-in loop to iterate through the array and display each movie within the console window.
 
+var movies = [];
+movies[0] = "Terminator";
+movies[1] = "Rambo";
+movies[2] = "Hangover";
+movies[3] = "Matrix";
+movies[4] = "Avengers";
+movies[5] = "Halloween";
+movies[6] = "Ace Ventura";
+
+for (var movie in movies) {
+    console.log(movies[movie]);
+}
+
+
+
+
 //STEP 7  Copy the code from step 5. Using the for-in loop to iterate through the array, display each movie within the console window in a sorted view.
+
+var movies = [];
+movies[0] = "Terminator";
+movies[1] = "Rambo";
+movies[2] = "Hangover";
+movies[3] = "Matrix";
+movies[4] = "Avengers";
+movies[5] = "Halloween";
+movies[6] = "Ace Ventura";
+
+for (var movie in movies) {
+    movies.sort();
+    console.log(movies[movie]);
+}
 
 /*STEP 8  Copy the code from step 5. Under the existing array, create a new array called leastFavMovies. Populate the array with the 3 movies that you regret watching. 
           Display both arrays within the console window so that it’s formatted to look like this (note the spacing, you must include that too):
@@ -62,9 +118,69 @@ Movie 3
 …
 */
 
+var movies = [];
+movies[0] = "Terminator";
+movies[1] = "Rambo";
+movies[2] = "Hangover";
+movies[3] = "Matrix";
+movies[4] = "Avengers";
+movies[5] = "Halloween";
+movies[6] = "Ace Ventura";
+
+var leastFavMovies = ["van helsing", "blade", "capone"];
+
+function displayMovies() {
+
+    console.log("Movies I like: \n")
+
+    for (var i = 0; i < movies.length; i++) {
+        console.log(movies[i]);
+    }
+    console.log("\nMovies I regret watching: \n")
+    for (var i = 0; i < leastFavMovies.length; i++) {
+        console.log(leastFavMovies[i]);
+    }
+}
+
+//testcase   displayMovies();
+
 
 
 /*STEP 9 Copy the code from step 8. Now, use the concat() method to merge the two arrays together into a single array called movies. 
 Use the console window to display the list in reverse sorted order.*/
 
+var movies = [];
+movies[0] = "Terminator";
+movies[1] = "Rambo";
+movies[2] = "Hangover";
+movies[3] = "Matrix";
+movies[4] = "Avengers";
+movies[5] = "Halloween";
+movies[6] = "Ace Ventura";
+
+var leastFavMovies = ["van helsing", "blade", "capone"];
+
+movies.concat(leastFavMovies);
+movies.sort().reverse();
+console.log(movies);
+
 //STEP 10 Copy the code from step 9. Use an array function to return just the last item in the array and display it within the console window.
+
+var movies = [];
+movies[0] = "Terminator";
+movies[1] = "Rambo";
+movies[2] = "Hangover";
+movies[3] = "Matrix";
+movies[4] = "Avengers";
+movies[5] = "Halloween";
+movies[6] = "Ace Ventura";
+
+var leastFavMovies = ["van helsing", "blade", "capone"];
+
+movies.concat(leastFavMovies);
+movies.sort().reverse();
+console.log(movies);
+
+
+
+console.log(movies.slice(-1)[0]); // Ace Ventura
